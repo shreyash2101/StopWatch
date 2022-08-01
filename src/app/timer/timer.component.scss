@@ -1,0 +1,30 @@
+.container {
+    text-align: center;
+    font-family: Lato;
+  }
+.counter-container{
+    align-items: center;
+    font-size: 27px;
+}
+.timer-buttons{
+    outline: none;
+    cursor: pointer;
+    border:none;
+    border-radius: 5px;
+    background: #7be9e1;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px 10px;
+    min-width: 100px;
+}
+.timer-buttons:hover{
+    background: #61d3cb;
+}
+.blink {
+    animation: blinker 1s linear infinite;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }

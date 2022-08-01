@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="counter-container">
+        <div *ngIf="counter" [ngClass]="{blink : !running}">
+            {{format()}}
+            <!-- {{counter}} -->
+        </div>
+        <div *ngIf="!counter">
+            {{format()}}
+            <!-- {{counter}} -->
+        </div>
+    </div>
+    <div class="timer-buttons-container">
+        <button class="timer-buttons" (click)="handleTimer()">{{buttonText}}</button>
+        <button class="timer-buttons" (click)="addLaps()" [disabled]="!counter">Lap</button>
+        <button class="timer-buttons" (click)="clearTimer()">Clear</button>
+    </div>
+    <div class="lap-container">
+        <div *ngFor="let lap of laps; let i=index">
+            <span><b>Lap {{i+1}} :</b> {{lap}}</span>
+        </div>
+    </div>
+</div>
